@@ -339,7 +339,7 @@ ViteJS, même s'il est en bonne voie, n'est pas le bundler le plus populaire auj
 
 
 
-14. **Ouvrez la console**, une erreur devrait apparaître indiquant que `_` n'est pas définit. 
+14. **Ouvrez la console**, une erreur devrait apparaître indiquant que `_` n'est pas défini. 
 
 
 
@@ -436,7 +436,7 @@ Ajoutez également le dossier `dist` au `.gitignore`. **Ne versionnez jamais les
 
 ### Utiliser CSS avec ViteJS (Bonus, mais promis ça va vite et c'est cool)
 
-Une des fonctionalités phares de ViteJS, c'est ce qu'on appelle le *Hot Module Replacement (H.M.R)* ou *Hot Reload*. Vous avez dû le remarquer, lorsque vous exécutez `npm run dev`, vous n'avez plus besoin de rafraîchir votre page : dès que vous faites une modification dans un fichier du projet, votre page reflète les modifications sans même avoir besoin de s'autorafraîchir (c'est ça le *Hot Reload*). 
+Une des fonctionnalités phares de ViteJS, c'est ce qu'on appelle le *Hot Module Replacement (H.M.R)* ou *Hot Reload*. Vous avez dû le remarquer, lorsque vous exécutez `npm run dev`, vous n'avez plus besoin de rafraîchir votre page : dès que vous faites une modification dans un fichier du projet, votre page reflète les modifications sans même avoir besoin de s'autorafraîchir (c'est ça le *Hot Reload*). 
 
 Ce qui est très sympathique, c'est que vous pouvez aussi le faire avec du CSS !
 
@@ -500,7 +500,7 @@ Ce qui est très sympathique, c'est que vous pouvez aussi le faire avec du CSS !
 
 
 
-25. **Re-exécutez la commande** `npm run build` puis `npx serve` dans le dossier `dist` et remarquez comment le CSS est maintenant inclu dans la page. D'où l'importance de build votre projet ! Vous remarquerez que votre code est automatiquement minifié également. C'est cadeau, ça me fait plaisir. 
+25. **Re-exécutez la commande** `npm run build` puis `npx serve` dans le dossier `dist` et remarquez comment le CSS est maintenant inclus dans la page. D'où l'importance de build votre projet ! Vous remarquerez que votre code est automatiquement minifié également. C'est cadeau, ça me fait plaisir. 
 
 
 
