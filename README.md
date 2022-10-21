@@ -6,7 +6,7 @@
 
 - Comprendre ce qu'est NPM
 - Installer et utiliser des libraires via NPM
-- Comprendre l'intérêt de systèmes de build tels que ViteJS
+- Comprendre l'intérêt des systèmes de build tels que ViteJS
 - Installer et tirer parti de ViteJS
 - Morceler son code en plusieurs fichiers
 
@@ -14,7 +14,7 @@
 
 ### Qu'est-ce que NPM ?
 
-*NPM*, pour *Node Package Manager* est le gestionnaire de librairies de l'écosystème JavaScript. Il en existe d'autres, tels que *Yarn* ou *PNPM*, mais tous s'installent avec *NPM* (oui, il faut installer un gestionnaire de librairies via un autre gestionnaire de librairies). *NPM* est compris dans l'installation de *Node.js*. Il remplit un rôle similaire à celui de *Composer* pour PHP, *Maven* pour Java ou *CocoaPods* pour l'écosystème Apple.
+*NPM*, pour *Node Package Manager*, est le gestionnaire de librairies de l'écosystème JavaScript. Il en existe d'autres, tels que *Yarn* ou *PNPM*, mais tous s'installent avec *NPM* (oui, il faut installer un gestionnaire de librairies via un autre gestionnaire de librairies). *NPM* est compris dans l'installation de *Node.js*. Il remplit un rôle similaire à celui de *Composer* pour PHP, *Maven* pour Java ou *CocoaPods* pour l'écosystème Apple.
 
 Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* correspond à *Node* et plus précisément à *Node.js* qui permet d'exécuter du JavaScript côté serveur. 
 
@@ -76,7 +76,7 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
 
    >**Info :**
    >
-   >Le `name` du projet correspond au nom qui sera utilisé pour installer votre projet si jamais vous le publier sur NPM ou tout autre dépôt. Par convention, si votre projet est lié à une organisation (entreprise ou famille de projets), vous pouvez le préfixer par `@[nom-orga]/[nom-projet]`, par exemple, si je voulais indiquer que ce projet est rattaché à l'IUT, je le renommerai ainsi : `@iut-bourgogne/tp-npm`.
+   >Le `name` du projet correspond au nom qui sera utilisé pour installer votre projet si jamais vous le publier sur NPM ou tout autre dépôt. Par convention, si votre projet est lié à une organisation, entreprise ou famille de projets, vous pouvez le préfixer par `@[nom-orga]/[nom-projet]`, par exemple, si je voulais indiquer que ce projet est rattaché à l'IUT, je le renommerai ainsi : `@iut-bourgogne/tp-npm`.
 
 
 
@@ -90,7 +90,7 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
 
 > #### Installer toutes les dépendances d'un projet
 >
-> Vous l'avez déjà utilisée, pour installer une librairie, nous utilisons la commande `npm install` ou `npm i` en version raccourcie. Pour utiliser cette commande sans arguments, vous avez juste besoin d'avoir un fichier `package.json` dans votre dossier courant. Cela installera toutes les dépendances présentes dans ce dernier. 
+> Vous l'avez déjà utilisée : pour installer une librairie, nous utilisons la commande `npm install` ou `npm i` en version raccourcie. Pour utiliser cette commande sans arguments, vous avez juste besoin d'avoir un fichier `package.json` dans votre dossier courant. Cela installera toutes les dépendances présentes dans ce dernier. 
 >
 > Si vous avez un fichier `package-lock.json`, alors NPM se basera sur ce dernier pour charger les versions exactes des dépendances utilisées par le projet.
 >
@@ -108,7 +108,7 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
 > npm install lodash@latest
 > 
 > # Installer plusieurs librairies : npm install [lib1] [lib2]
-> npm install lodash @popperjs/core
+<!-- > npm install lodash @popperjs/core -->
 > 
 > # Installer une dépendance avec une version spécifique [lib]@[version]
 > npm install lodash@3
@@ -225,7 +225,7 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
 
 6. **Regardez aussi votre dossier, vous devriez y constater deux modifications :**
 
-   - un fichier `package-lock.json`, **ce fichier est aussi très important** ! Il contient la résolution des versions des librairies qui correspondent aux contraintes écrites dans le `package.json` (dans notre cas, la contrainte est `^4.17.21`, on verra ce qu'elle veut dire plus tard). Autrement dit, si vous transmettez le projet à un collègue sans le `package-lock.json` avec, lorsque la personne exécutera `npm install`, une nouvelle résolution des versions s'effectuera et il se pourrait qu'il ait des versions de librairies légèrement différentes des votres, ce qui pourrait induire de nouveaux bugs ou comportements inattendus dans votre projet.
+   - un fichier `package-lock.json`, **ce fichier est aussi très important** ! Il contient la résolution des versions des librairies qui correspondent aux contraintes écrites dans le `package.json` (dans notre cas, la contrainte est `^4.17.21`). Autrement dit, si vous transmettez le projet à un collègue sans le `package-lock.json` avec, lorsque la personne exécutera `npm install`, une nouvelle résolution des versions s'effectuera et il se pourrait qu'il ait des versions de librairies légèrement différentes des votres, ce qui pourrait induire de nouveaux bugs ou comportements inattendus dans votre projet.
 
      
 
@@ -241,7 +241,7 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
    **/node_modules/
    ```
 
-   Cela empêchera Git de suivre les modifications apportées à tous les dossiers `node_modules` du projet (qu'ils soient à la racine ou imbriqués dans des sous-dossiers). **Il ne faut jamais versionner le dossier** `node_modules`, en plus d'être lourd, certaines librairies peuvent varier selon l'OS sur lesquelles vous les installez. 
+   Cela empêchera Git de suivre les modifications apportées à tous les dossiers `node_modules` du projet (qu'ils soient à la racine, ou imbriqués dans des sous-dossiers). **Il ne faut jamais versionner le dossier** `node_modules`, en plus d'être lourd, certaines librairies peuvent varier selon l'OS sur lesquelles vous les installez. 
 
    De même, si vous devez copier, compresser ou déplacer un projet avec un `node_modules`, sachez qu'il sera toujours plus rapide d'ignorer/supprimer ce dossier et de refaire un `npm i` dans le nouveau dossier. 
 
@@ -286,9 +286,9 @@ Créé par Evan You, le créateur de VueJS, ViteJS est un outil de build JavaScr
 
 Cependant, à l'époque, pour chaque fichier, il fallait ajouter une nouvelle balise `<script>` tout en faisant attention à leur ordre pour être sûr que l'ordre de dépendance soit bien respecté, car il n'existait pas de telle fonction en JavaScript et il n'était donc pas possible de les utiliser dans le navigateur.  
 
-C'est en réponse à cette problématique que les outils de build JavaScript ont étés créés. Ils ont apporté avec eux des fonctions comme `require` et `import` qui permettaient à un fichier JavaScript d'en charger un autre. À l'époque, ces fonctions n'étaient toujours pas supportées par les navigateurs et c'est cette famille d'outils qui venaient fusionner les sous-fichiers JavaScript en un seul gros fichier que l'on appelle le *bundle*, et qui donna leur nom aux outils JavaScript de build qu'on appelle plus communément les *JavaScript bundlers*.
+C'est en réponse à cette problématique que les outils de build JavaScript ont été créés. Ils ont apporté avec eux des fonctions comme `require` et `import` qui permettaient à un fichier JavaScript d'en charger un autre. À l'époque, ces fonctions n'étaient toujours pas supportées par les navigateurs et c'est cette famille d'outils qui venaient fusionner les sous-fichiers JavaScript en un seul gros fichier que l'on appelle le *bundle*, et qui donna leur nom aux outils JavaScript de build qu'on appelle plus communément les *JavaScript bundlers*.
 
-Outre la fusion de ces fichiers en bundles, les bundlers permettent d'autres types d'optimisation comme la transpilation (par exemple conversion du *TypeScript* en *JavaScript*), conversion du code JavaScript pour qu'il soit compatible avec tous les navigateurs via *Babel* ou encore minification des fichiers pour optimiser leur chargement. 
+Outre la fusion de ces fichiers en bundles, les bundlers permettent d'autres types d'opérations comme la transpilation (par exemple conversion du *TypeScript* en *JavaScript*), conversion du code JavaScript pour qu'il soit compatible avec tous les navigateurs via *Babel* ou encore la minification des fichiers pour optimiser leur chargement. 
 
 ViteJS, même s'il est en bonne voie, n'est pas le bundler le plus populaire aujourd'hui. Cette place revient à Webpack qui domine le peloton avec ViteJS et Rollup. Cependant, Webpack est extrêmement dur à prendre en main et nous le verrons plus tard dans le cursus, d'autant plus que dans la plupart des cas, ce seront vos frameworks qui le paramètreront pour vous. 
 
@@ -307,7 +307,7 @@ ViteJS, même s'il est en bonne voie, n'est pas le bundler le plus populaire auj
 
       Cela ajoutera vite dans l'entrée `devDependencies` du `package.json`, car nous n'avons pas besoin que l'utilisateur final installe ViteJS pour utiliser notre projet !
 
-    - **Ajoutez deux entrées à l'objet** `scripts` présent dans votre `package.json` (si vous en avez déjà, vous pouvez les remplacer si vous voulez) :
+    - **Ajoutez deux entrées à l'objet** `scripts` **présent dans votre** `package.json` (si vous en avez déjà, vous pouvez les remplacer si vous voulez) :
 
       ```javascript
       {
@@ -354,12 +354,12 @@ ViteJS, même s'il est en bonne voie, n'est pas le bundler le plus populaire auj
 
 
 
-**Important** avec les bundlers, vous pouvez charger toute librairie contenue dans le `node_modules` via `from`. À partir du moment où vous ne mettez pas de chemin relative (par exemple `./lodash`), le bundler considérera que vous parlez d'une librairie. Ici, en écrivant `from "lodash"`, on va chercher le fichier indiqué dans l'entrée `main` du `package.json` de la librairie Lodash. Dans certaines librairies vous pourrez importer depuis des fichiers directs de la librairie également (par exemple `from "lodash/camelCase"` qui chargera le fichier `node_modules/lodash/camelCase.js`).
+**Important** avec les bundlers, vous pouvez charger toute librairie contenue dans le dossier `node_modules` via `from`. À partir du moment où vous ne mettez pas de chemin relatif (par exemple `./lodash`), le bundler considérera que vous parlez d'une librairie. Ici, en écrivant `from "lodash"`, on va chercher le fichier indiqué dans l'entrée `main` du `package.json` de la librairie Lodash. Dans certaines librairies vous pourrez importer depuis des fichiers directs de la librairie également (par exemple `from "lodash/camelCase"` qui chargera le fichier `node_modules/lodash/camelCase.js`).
 
-**Vous pouvez (et devriez) aussi au possible n'importe que les fonctions que vous comptez réellement utiliser**. Cela permet au bundler de n'extraire de la librairie que le code que vous utilisez réellement. C'est ce qu'on appelle du *tree shaking*. Pour ça, on utilise cette syntaxe :
+**Vous pouvez (et devriez) aussi n'importer que les fonctions que vous comptez réellement utiliser** quand cela est possible. Cela permet au bundler de n'extraire de la librairie que le code que vous utilisez réellement. C'est ce qu'on appelle du *tree shaking*. Pour ça, on utilise cette syntaxe :
 
 ```js
-import { camelCase } from "loadash";
+import { camelCase } from "lodash";
 
 // Plus besoin de "_"
 console.log( camelCase("Salut les loulous") );
@@ -387,7 +387,7 @@ console.log( camelCase("Salut les loulous") );
     // Spécifier l'extension est facultatif quand c'est du JS ou TS
     import { myAwesomeFunction1 } from "./functions";
     
-    // Si on veut utiliser plusieurs functions du fichier 
+    // Si on veut utiliser plusieurs fonctions du fichier 
     import {
       myAwesomeFunction1,
       myAwesomeFunction2 as myFunction // Je la renomme en plus court 
@@ -410,7 +410,7 @@ console.log( camelCase("Salut les loulous") );
 
 ### Build son projet pour l'envoyer en production
 
-L'utilisation de bundlers amène avec elle la notion de *version de développement* et *version de production*, ça y est vous rentrez dans la cours des grands ! Plus haut, lorsque nous avons lancé le serveur de Vite, nous avons exécuté la commande `npm run dev`, ce qui indique implicitement que nous exécutons le projet en version de développement (je vous le donne en mile). 
+L'utilisation de bundlers amène avec elle la notion de *version de développement* et *version de production*, ça y est vous rentrez dans la cours des grands ! Plus haut, lorsque nous avons lancé le serveur de Vite, nous avons exécuté la commande `npm run dev`, ce qui indique implicitement que nous exécutons le projet en version de développement (je vous le donne en mille). 
 
 Une version de développement est loin d'être optimisée. Souvent, le code n'est pas minifié et tout un tas d'optimisations ne sont pas exécutées. Mais surtout, dans certains cas (spoiler alert c'est le nôtre), une version de développement n'est pas fonctionnelle en production.
 
@@ -418,7 +418,7 @@ Il faut donc, avant de déployer notre projet, le *build* vers une version de pr
 
 
 
-20.  **Arrêtez le serveur de développement ViteJS** (en faisant `CTRL + C` dans le terminal qui exécute ViteJS), lancez un serveur "classique" avec `npx serve` et **ouvrez** `http://localhost:3030`  **dans votre navigateur.** Ouvrez la console : votre code ne fonctionne plus. Vous pouvez couper le serveur.
+20.  **Arrêtez le serveur de développement ViteJS** (en faisant `CTRL + C` dans le terminal qui exécute ViteJS), lancez un serveur "classique" avec `npx serve` et **ouvrez** `http://localhost:3000` **dans votre navigateur.** Ouvrez la console : votre code ne fonctionne plus. Vous pouvez couper le serveur.
 
 
 
@@ -485,7 +485,7 @@ Ce qui est très sympathique, c'est que vous pouvez aussi le faire avec du CSS !
 
 
 
-23. À présent, **importez votre CSS dans votre** `src/main.js`. :warning: **ATTENTION :** vous ne pouvez faire cela que grâce à votre bundler ! C'est tout à fait commun en JavaScript, mais jamais sans l'utilisation d'un bundler !
+23. À présent, **importez votre CSS dans votre** `src/main.js`. :warning: **ATTENTION : vous ne pouvez faire cela que grâce à votre bundler !** C'est tout à fait commun en JavaScript, mais **jamais sans l'utilisation d'un bundler !**
 
     ```js
     // src/main.js
