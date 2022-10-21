@@ -219,7 +219,7 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
    }
    ```
 
-   Ce qu'indique cette ligne, c'est que votre projet nécessite au moins la version `4.17.21` pour fonctionner. À chaque vous que vous ajouterez une nouvelle dépendance, NPM s'assurera que cette dépendance est compatible avec celles déjà installées. Par exemple, si une librairie se base elle aussi sur Lodash, mais n'est compatible qu'avec Lodash 3.0, alors NPM refusera l'installation et il vous faudra utiliser une version compatible de Lodash ou opter pour une autre librairie. 
+   Ce qu'indique cette ligne, c'est que votre projet nécessite au moins la version `4.17.21` pour fonctionner. À chaque que vous ajouterez une nouvelle dépendance, NPM s'assurera que cette dépendance est compatible avec celles déjà installées. Par exemple, si une librairie se base elle aussi sur Lodash, mais n'est compatible qu'avec Lodash 3.0, alors NPM refusera l'installation et il vous faudra utiliser une version compatible de Lodash ou opter pour une autre librairie. 
 
 
 
