@@ -160,7 +160,7 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
 >
 > ### Mettre à jour les dépendances
 >
-> Vous pouvez mettre à jour toutes les dépendances de votre projet avec la commande `npm update`. NPM cherchera alors s'il existe des versions supérieures à celles installées, mais toujours en respectant les contraintes que vous avez spécifiés. 
+> Vous pouvez mettre à jour toutes les dépendances de votre projet avec la commande `npm update`. NPM cherchera alors s'il existe des versions supérieures à celles installées, mais toujours en respectant les contraintes que vous avez spécifiées. 
 >
 > ```shell
 > # Met à jour toutes les dépendances du projet
@@ -219,7 +219,7 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
    }
    ```
 
-   Ce qu'indique cette ligne, c'est que votre projet nécessite au moins la version `4.17.21` pour fonctionner. À chaque que vous ajouterez une nouvelle dépendance, NPM s'assurera que cette dépendance est compatible avec celles déjà installées. Par exemple, si une librairie se base elle aussi sur Lodash, mais n'est compatible qu'avec Lodash 3.0, alors NPM refusera l'installation et il vous faudra utiliser une version compatible de Lodash ou opter pour une autre librairie. 
+   Ce qu'indique cette ligne, c'est que votre projet nécessite au moins la version `4.17.21` pour fonctionner. À chaque fois que vous ajouterez une nouvelle dépendance, NPM s'assurera que cette dépendance est compatible avec celles déjà installées. Par exemple, si une librairie se base elle aussi sur Lodash, mais n'est compatible qu'avec Lodash 3.0, alors NPM refusera l'installation et il vous faudra utiliser une version compatible de Lodash ou opter pour une autre librairie. 
 
 
 
@@ -276,7 +276,7 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
 
 
 
-11. Arrivé à ce point, vous devriez être assez déçus par la façon d'utiliser les librairies NPM et en entrevoir quelques défauts. **Relevez les principaux défauts de cette approche**.
+11. Arrivé à ce point, vous devriez être assez déçu par la façon d'utiliser les librairies NPM et en entrevoir quelques défauts. **Relevez les principaux défauts de cette approche**.
 
 
 
@@ -323,7 +323,7 @@ ViteJS, même s'il est en bonne voie, n'est pas le bundler le plus populaire auj
     - Dans votre fichier `index.html` modifiez vos balises `<script>` :
 
       - **Supprimez la balise script chargeant lodash**
-      - **Modifier la valeur de l'attribut** `type` **du script chargeant le fichier** `src/main.js` **pour** `module` 
+      - **Modifiez la valeur de l'attribut** `type` **du script chargeant le fichier** `src/main.js` **pour** `module` 
 
     
 
@@ -343,7 +343,7 @@ ViteJS, même s'il est en bonne voie, n'est pas le bundler le plus populaire auj
 
 
 
-15. **Chargez Lodash** dans votre fichier `src/main.js` pour que votre script fonctionne comme avant. Pour cela, utiliser la syntaxe `import` : 
+15. **Chargez Lodash** dans votre fichier `src/main.js` pour que votre script fonctionne comme avant. Pour cela, utilisez la syntaxe `import` : 
 
     ```js
     import _ from "lodash";
@@ -510,7 +510,7 @@ SCSS est un pré-processeur de CSS, au même titre que SASS, LESS ou Stylus. C'e
 
 
 
-26. **Renommez** `src/style.css` **en** `src/style.scss` et modifier le code comme ceci : 
+26. **Renommez** `src/style.css` **en** `src/style.scss` et modifiez le code comme ceci : 
 
     ```scss
     // Pas besoin de modifier le body
