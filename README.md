@@ -254,14 +254,14 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
    ```html
    <!doctype html>
    <html lang="fr">
-   	<head>
-     	<!-- ... -->
-       <script type="text/javascript" src="node_modules/lodash/lodash.js" defer></script>
-       <script type="text/javascript" src="src/main.js" defer></script>
-     </head>
-     <body>
-       <!-- ... -->
-     </body>
+      <head>
+         <!-- ... -->
+         <script type="text/javascript" src="node_modules/lodash/lodash.js" defer></script>
+         <script type="text/javascript" src="src/main.js" defer></script>
+      </head>
+      <body>
+         <!-- ... -->
+      </body>
    </html>
    ```
 
