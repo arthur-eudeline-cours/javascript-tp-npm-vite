@@ -108,7 +108,7 @@ Si vous avez l'œil, vous avez remarqué que la première lettre de *NPM* corres
 > npm install lodash@latest
 > 
 > # Installer plusieurs librairies : npm install [lib1] [lib2]
-<!-- > npm install lodash @popperjs/core -->
+> npm install lodash @popperjs/core
 > 
 > # Installer une dépendance avec une version spécifique [lib]@[version]
 > npm install lodash@3
